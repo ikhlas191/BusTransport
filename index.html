@@ -30,11 +30,11 @@
 
     /* ============ HEADER ============ */
     header {
-      background: #0b1e3d;
+      background: #8b0000;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
     }
 
     .nav-bar {
@@ -54,7 +54,7 @@
       gap: 8px;
     }
     .logo span {
-      color: #f0b90b;
+      color: #ffcccc;
     }
 
     .nav-links {
@@ -66,25 +66,25 @@
 
     .nav-links a {
       text-decoration: none;
-      color: #ddd;
+      color: #f0f0f0;
       font-weight: 500;
       transition: color 0.3s;
       font-size: 0.95rem;
     }
     .nav-links a:hover {
-      color: #f0b90b;
+      color: #ffcccc;
     }
 
     .btn-utama {
-      background: #f0b90b;
-      color: #0b1e3d !important;
+      background: #ffffff;
+      color: #8b0000 !important;
       padding: 10px 22px;
       border-radius: 30px;
       font-weight: 700;
       transition: all 0.3s;
     }
     .btn-utama:hover {
-      background: #d4a40a;
+      background: #ffe0e0;
       transform: translateY(-2px);
     }
 
@@ -99,30 +99,57 @@
 
     /* ============ HERO ============ */
     .hero {
-      background: linear-gradient(rgba(11,30,61,0.85), rgba(11,30,61,0.9)), 
-                  url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1200&h=600&fit=crop');
+      background: linear-gradient(rgba(139,0,0,0.75), rgba(100,0,0,0.85)), 
+                  url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1200&h=600&fit=crop');
       background-size: cover;
       background-position: center;
-      padding: 100px 0;
+      background-attachment: fixed;
+      padding: 120px 0;
       color: white;
       text-align: center;
+      position: relative;
+    }
+
+    /* Tambahan blur pada imej latar */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      filter: blur(8px);
+      z-index: -1;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(139,0,0,0.7);
+      z-index: -1;
     }
 
     .hero h1 {
       font-size: 2.8rem;
       margin-bottom: 1rem;
       line-height: 1.2;
+      position: relative;
     }
     .hero h1 span {
-      color: #f0b90b;
+      color: #ffcccc;
     }
     .hero p {
       font-size: 1.2rem;
-      color: #ccc;
+      color: #f0f0f0;
       margin-bottom: 2rem;
       max-width: 650px;
       margin-left: auto;
       margin-right: auto;
+      position: relative;
     }
 
     .btn-group {
@@ -130,6 +157,7 @@
       gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
+      position: relative;
     }
     .btn {
       display: inline-block;
@@ -142,14 +170,14 @@
       border: none;
       font-size: 1rem;
     }
-    .btn-emas {
-      background: #f0b90b;
-      color: #0b1e3d;
+    .btn-merah {
+      background: #ffffff;
+      color: #8b0000;
     }
-    .btn-emas:hover {
-      background: #d4a40a;
+    .btn-merah:hover {
+      background: #ffe0e0;
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(240,185,11,0.3);
+      box-shadow: 0 10px 25px rgba(255,255,255,0.3);
     }
     .btn-outline-putih {
       border: 2px solid white;
@@ -158,7 +186,7 @@
     }
     .btn-outline-putih:hover {
       background: white;
-      color: #0b1e3d;
+      color: #8b0000;
     }
 
     /* ============ SECTION ============ */
@@ -166,7 +194,7 @@
       padding: 80px 0;
     }
     section:nth-child(even) {
-      background: #f5f7fa;
+      background: #fdf5f5;
     }
 
     .section-title {
@@ -175,8 +203,8 @@
     }
     .section-title .label {
       display: inline-block;
-      background: #fff8e0;
-      color: #b8900a;
+      background: #ffe0e0;
+      color: #8b0000;
       padding: 6px 16px;
       border-radius: 20px;
       font-weight: 600;
@@ -187,7 +215,7 @@
     }
     .section-title h2 {
       font-size: 2.2rem;
-      color: #0b1e3d;
+      color: #8b0000;
       margin-bottom: 10px;
     }
     .section-title p {
@@ -209,11 +237,11 @@
       border-radius: 20px;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
-      border: 1px solid #e8e8e8;
+      border: 1px solid #fdd;
     }
     .service-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+      box-shadow: 0 25px 50px rgba(139,0,0,0.1);
     }
     .service-card img {
       width: 100%;
@@ -224,7 +252,7 @@
     }
     .service-card h3 {
       margin-bottom: 0.8rem;
-      color: #0b1e3d;
+      color: #8b0000;
     }
     .service-card p {
       color: #666;
@@ -233,11 +261,58 @@
     }
     .harga {
       font-weight: 700;
-      color: #0b1e3d;
+      color: #8b0000;
       font-size: 1.3rem;
     }
     .harga span {
-      color: #f0b90b;
+      color: #cc0000;
+    }
+
+    /* ============ CHAUFFEUR ============ */
+    .chauffeur-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .chauffeur-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+      border: 1px solid #fdd;
+    }
+    .chauffeur-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(139,0,0,0.15);
+    }
+    .chauffeur-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .chauffeur-body {
+      padding: 25px 20px;
+      text-align: center;
+    }
+    .chauffeur-body .ikon-pemandu {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .chauffeur-body h4 {
+      color: #8b0000;
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+    .chauffeur-body p {
+      color: #777;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    .chauffeur-body .harga {
+      color: #8b0000;
+      font-weight: 700;
+      font-size: 1.2rem;
     }
 
     /* ============ KELEBIHAN ============ */
@@ -251,14 +326,14 @@
       background: white;
       padding: 30px 20px;
       border-radius: 20px;
-      border: 1px solid #e8e8e8;
+      border: 1px solid #fdd;
     }
     .kelebihan-item .ikon {
       font-size: 3rem;
       margin-bottom: 0.8rem;
     }
     .kelebihan-item h4 {
-      color: #0b1e3d;
+      color: #8b0000;
       margin: 5px 0;
     }
     .kelebihan-item p {
@@ -266,50 +341,9 @@
       font-size: 0.9rem;
     }
 
-    /* ============ ARMADA ============ */
-    .armada-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .armada-card {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-      border: 1px solid #e8e8e8;
-    }
-    .armada-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
-    .armada-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .armada-body {
-      padding: 20px;
-      text-align: center;
-    }
-    .armada-body h4 {
-      color: #0b1e3d;
-      margin-bottom: 5px;
-    }
-    .armada-body p {
-      color: #777;
-      font-size: 0.9rem;
-      margin-bottom: 8px;
-    }
-    .armada-body .harga {
-      color: #0b1e3d;
-      font-weight: 700;
-    }
-
     /* ============ CTA ============ */
     .cta {
-      background: linear-gradient(135deg, #0b1e3d 0%, #132d5e 100%);
+      background: linear-gradient(135deg, #8b0000 0%, #a00000 100%);
       color: white;
       text-align: center;
       border-radius: 30px;
@@ -322,19 +356,19 @@
     }
     .cta p {
       font-size: 1.1rem;
-      color: #ccc;
+      color: #ffcccc;
       margin-bottom: 20px;
     }
-    .cta .btn-emas {
-      background: #f0b90b;
-      color: #0b1e3d;
+    .cta .btn-merah {
+      background: #ffffff;
+      color: #8b0000;
     }
 
     /* ============ FOOTER ============ */
     footer {
-      background: #0b1e3d;
+      background: #4a0000;
       padding: 50px 0 25px;
-      color: #ccc;
+      color: #ddd;
     }
     .footer-grid {
       display: grid;
@@ -343,26 +377,26 @@
       margin-bottom: 30px;
     }
     .footer-grid h4 {
-      color: #f0b90b;
+      color: #ffcccc;
       margin-bottom: 15px;
       font-size: 1.1rem;
     }
     .footer-grid p, .footer-grid a {
-      color: #bbb;
+      color: #ccc;
       text-decoration: none;
       font-size: 0.95rem;
       line-height: 2;
       display: block;
     }
     .footer-grid a:hover {
-      color: #f0b90b;
+      color: #ffffff;
     }
     .footer-bottom {
-      border-top: 1px solid #1a3050;
+      border-top: 1px solid #6b0000;
       padding-top: 20px;
       text-align: center;
       font-size: 0.9rem;
-      color: #888;
+      color: #aaa;
     }
 
     /* ============ RESPONSIVE ============ */
@@ -370,13 +404,16 @@
       .hero h1 {
         font-size: 2rem;
       }
+      .hero {
+        background-attachment: scroll;
+      }
       .nav-links {
         display: none;
         position: absolute;
         top: 62px;
         left: 0;
         right: 0;
-        background: #0b1e3d;
+        background: #8b0000;
         flex-direction: column;
         padding: 20px;
         gap: 1rem;
@@ -407,7 +444,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#utama">Utama</a></li>
         <li><a href="#perkhidmatan">Perkhidmatan</a></li>
-        <li><a href="#armada">Armada Kami</a></li>
+        <li><a href="#chauffeur">Chauffeur</a></li>
         <li><a href="#kelebihan">Kelebihan</a></li>
         <li><a href="#hubungi" class="btn-utama">Tempah Sekarang</a></li>
       </ul>
@@ -420,7 +457,7 @@
       <h1>Sewa <span>Kereta, Van & Bas</span> di Malaysia</h1>
       <p>Perkhidmatan sewa kenderaan yang dipercayai, selesa dan berpatutan untuk percutian, acara korporat, rombongan, dan kegunaan harian anda.</p>
       <div class="btn-group">
-        <a href="#armada" class="btn btn-emas">🚘 Lihat Armada Kami</a>
+        <a href="#chauffeur" class="btn btn-merah">🚘 Lihat Perkhidmatan Kami</a>
         <a href="https://wa.me/60390782003" class="btn btn-outline-putih" target="_blank">📱 WhatsApp Kami</a>
       </div>
     </div>
@@ -436,21 +473,21 @@
       </div>
       <div class="services-grid">
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=400&h=250&fit=crop" alt="Sewa Kereta">
+          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400&h=250&fit=crop" alt="Sewa Kereta">
           <h3>🚗 Sewa Kereta</h3>
           <p>Kereta selesa dan jimat minyak untuk perjalanan bandar dan luar bandar. Sesuai untuk percutian keluarga atau urusan kerja.</p>
           <div class="harga">Dari <span>RM 100</span> / hari</div>
         </div>
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=250&fit=crop" alt="Sewa Van">
+          <img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=400&h=250&fit=crop" alt="Sewa Van Putih">
           <h3>🚐 Sewa Van</h3>
-          <p>Van luas dan selesa untuk rombongan kecil, family trip, atau pengangkutan barangan ringan.</p>
+          <p>Van putih luas dan selesa untuk rombongan kecil, family trip, atau pengangkutan barangan ringan.</p>
           <div class="harga">Dari <span>RM 200</span> / hari</div>
         </div>
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=400&h=250&fit=crop" alt="Sewa Bas">
+          <img src="https://images.unsplash.com/photo-1600133983588-b8f9dd32a6b6?w=400&h=250&fit=crop" alt="Sewa Bas Putih">
           <h3>🚌 Sewa Bas</h3>
-          <p>Bas persiaran untuk rombongan besar, lawatan syarikat, majlis perkahwinan, dan acara khas.</p>
+          <p>Bas persiaran putih yang selesa untuk rombongan besar, lawatan syarikat, majlis perkahwinan, dan acara khas.</p>
           <div class="harga">Dari <span>RM 500</span> / hari</div>
         </div>
         <div class="service-card">
@@ -463,37 +500,40 @@
     </div>
   </section>
 
-  <!-- ==================== ARMADA KAMI ==================== -->
-  <section id="armada">
+  <!-- ==================== CHAUFFEUR SERVICES ==================== -->
+  <section id="chauffeur">
     <div class="container">
       <div class="section-title">
-        <span class="label">Armada Kami</span>
-        <h2>Kenderaan Yang Tersedia</h2>
-        <p>Pilihan kenderaan terbaik yang diselenggara rapi untuk keselesaan anda</p>
+        <span class="label">Chauffeur Services</span>
+        <h2>Sewa Kereta Berserta Pemandu</h2>
+        <p>Perkhidmatan pemandu profesional untuk perjalanan anda yang lebih selesa, selamat dan bebas tekanan</p>
       </div>
-      <div class="armada-grid">
-        <div class="armada-card">
-          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&h=300&fit=crop" alt="Perodua Myvi">
-          <div class="armada-body">
-            <h4>Perodua Myvi / Axia</h4>
-            <p>Kereta kompak, jimat minyak</p>
-            <div class="harga">RM 100 / hari</div>
+      <div class="chauffeur-grid">
+        <div class="chauffeur-card">
+          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=500&h=300&fit=crop" alt="Chauffeur Kereta Mewah">
+          <div class="chauffeur-body">
+            <div class="ikon-pemandu">👨‍✈️</div>
+            <h4>Kereta Premium + Pemandu</h4>
+            <p>Sesuai untuk urusan korporat, lapangan terbang, dan acara rasmi.</p>
+            <div class="harga">Dari <span>RM 350</span> / hari</div>
           </div>
         </div>
-        <div class="armada-card">
-          <img src="https://images.unsplash.com/photo-1546614042-7df3c24c9e5d?w=500&h=300&fit=crop" alt="Toyota Vios">
-          <div class="armada-body">
-            <h4>Toyota Vios / Honda City</h4>
-            <p>Kereta sedan selesa</p>
-            <div class="harga">RM 150 / hari</div>
+        <div class="chauffeur-card">
+          <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=500&h=300&fit=crop" alt="Chauffeur Van">
+          <div class="chauffeur-body">
+            <div class="ikon-pemandu">👨‍✈️</div>
+            <h4>Van + Pemandu</h4>
+            <p>Untuk rombongan keluarga, pelancongan, dan acara kumpulan kecil.</p>
+            <div class="harga">Dari <span>RM 500</span> / hari</div>
           </div>
         </div>
-        <div class="armada-card">
-          <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=500&h=300&fit=crop" alt="Van Toyota Hiace">
-          <div class="armada-body">
-            <h4>Toyota Hiace (Van)</h4>
-            <p>Muatan 10-12 penumpang</p>
-            <div class="harga">RM 250 / hari</div>
+        <div class="chauffeur-card">
+          <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=500&h=300&fit=crop" alt="Chauffeur Bas">
+          <div class="chauffeur-body">
+            <div class="ikon-pemandu">👨‍✈️</div>
+            <h4>Bas Persiaran + Pemandu</h4>
+            <p>Untuk rombongan besar, lawatan syarikat, dan majlis khas.</p>
+            <div class="harga">Dari <span>RM 900</span> / hari</div>
           </div>
         </div>
       </div>
@@ -515,9 +555,9 @@
           <p>Semua kenderaan diservis berkala dan dalam keadaan tip-top.</p>
         </div>
         <div class="kelebihan-item">
-          <div class="ikon">💰</div>
-          <h4>Harga Berpatutan</h4>
-          <p>Kadar sewa kompetitif tanpa caj tersembunyi.</p>
+          <div class="ikon">👨‍✈️</div>
+          <h4>Pemandu Profesional</h4>
+          <p>Pemandu terlatih, berlesen dan berpengalaman luas.</p>
         </div>
         <div class="kelebihan-item">
           <div class="ikon">📞</div>
@@ -525,9 +565,9 @@
           <p>Bantuan kecemasan tersedia sepanjang masa.</p>
         </div>
         <div class="kelebihan-item">
-          <div class="ikon">📍</div>
-          <h4>Cawangan Strategik</h4>
-          <p>Lokasi pengambilan mudah di KL, Selangor & seluruh Malaysia.</p>
+          <div class="ikon">💰</div>
+          <h4>Harga Berpatutan</h4>
+          <p>Kadar sewa kompetitif tanpa caj tersembunyi.</p>
         </div>
       </div>
     </div>
@@ -538,7 +578,7 @@
     <div class="cta">
       <h2>📞 Sedia Untuk Menempah?</h2>
       <p>Hubungi kami sekarang untuk dapatkan sebut harga terbaik. Kami sedia membantu perjalanan anda!</p>
-      <a href="https://wa.me/60390782003" class="btn btn-emas" target="_blank">📱 WhatsApp Kami +60390782003</a>
+      <a href="https://wa.me/60390782003" class="btn btn-merah" target="_blank">📱 WhatsApp Kami +60390782003</a>
     </div>
   </div>
 
@@ -554,7 +594,7 @@
           <h4>Pautan Pantas</h4>
           <a href="#utama">Utama</a>
           <a href="#perkhidmatan">Perkhidmatan</a>
-          <a href="#armada">Armada Kami</a>
+          <a href="#chauffeur">Chauffeur</a>
           <a href="#kelebihan">Kelebihan</a>
           <a href="#hubungi">Hubungi Kami</a>
         </div>
@@ -562,13 +602,14 @@
           <h4>Hubungi Kami</h4>
           <p><strong>📞 Telefon:</strong> <a href="tel:+60390782003">+60390782003</a></p>
           <p><strong>💬 WhatsApp:</strong> <a href="https://wa.me/60390782003" target="_blank">+60390782003</a></p>
-          <p><strong>📧 Emel:</strong> <a href="mailto:info@eztransport.my">info@eztransport.my</a></p>
+          <p><strong>📧 Emel:</strong> <a href="mailto:helpline@eztransportrental.com.my">helpline@eztransportrental.com.my</a></p>
         </div>
         <div>
-          <h4>Waktu Operasi</h4>
-          <p>Isnin - Jumaat: 9:00 AM - 6:00 PM</p>
-          <p>Sabtu: 9:00 AM - 1:00 PM</p>
-          <p>Ahad & Cuti Umum: Tutup</p>
+          <h4>Alamat Pejabat</h4>
+          <p><strong>EZ TRANSPORT RENTAL</strong><br>
+          PW23-1 ONE MON'T KIARA<br>
+          NO 1 JALAN KIARA<br>
+          50480 KUALA LUMPUR</p>
         </div>
       </div>
       <div class="footer-bottom">
